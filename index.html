@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flip Book</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+    <div id="Frame" class="Frame">
+      <script>
+        for (var i = 1; i <= 14; i++) {
+          document.write(`
+            <div id="pg${i}" class="page">
+              <div class="front">
+                <div id="f${i}" class="front-content">
+                  <img src="images/Param Science Magazine-${2*i-1}.jpg" style="width:500px;height:800px;">
+                </div>
+              </div>
+              <div class="back">
+                <div id="b${i}" class="back-content">
+                  <img src="images/Param Science Magazine-${2*i}.jpg" style="width:500px;height:800px;">
+                </div>
+              </div>
+            </div>
+          `);
+        }
+      </script>
+    </div>
+
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+</body>
+</html>
